@@ -1,158 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#34be9d"
-    tools:context=".Foods">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <data>
+
+        <variable
+            name="foods"
+            type="com.stechoq.tugaskelompok2.data.FoodsData" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
-    <ImageButton
-        android:id="@+id/backfood"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_back_button"
-        android:background="#34be9d"
-        android:layout_marginHorizontal="20dp"
-        android:padding="15dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="Food Center"
-        android:paddingTop="12dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-    </LinearLayout>
+        android:background="#34be9d"
+        tools:context=".FoodsActivity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/carbo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        app:cardCornerRadius="15dp"
-        android:backgroundTint="@color/white"
-        app:contentPadding="5dp"
-        android:layout_marginTop="115dp">
         <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@drawable/carbo"/>
-        </LinearLayout>
-        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:textColor="#34be9d"
-            android:layout_marginLeft="120dp"
-            android:layout_marginRight="20dp"
-            android:text="Carbo: Carbohydrates are the primary source of energy for the human body. Products made from these grains, such as bread, pasta, and cereals, also provide carbohydrates."/>
-    </androidx.cardview.widget.CardView>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/protein"
-        android:layout_below="@id/carbo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        app:cardCornerRadius="15dp"
-        android:backgroundTint="@color/white"
-        app:contentPadding="5dp">
-        <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@drawable/fish"/>
+            <ImageButton
+                android:id="@+id/backfood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="#34be9d"
+                android:padding="15dp"
+                android:src="@drawable/ic_back_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:text="Food Center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:textColor="#34be9d"
-            android:layout_marginLeft="120dp"
-            android:layout_marginRight="20dp"
-            android:text="Protein: An important source of animal protein for the growth and maintenance of the body. If someone is vegetarian, it can be replaced with tempeh, tofu, or other vegetable protein sources."/>
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/vege"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        app:cardCornerRadius="15dp"
-        android:backgroundTint="@color/white"
-        app:contentPadding="5dp"
-        android:layout_below="@id/protein">
-        <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carbo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="15dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/vegetables"/>
-        </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:textColor="#34be9d"
-            android:layout_marginLeft="120dp"
-            android:layout_marginRight="20dp"
-            android:text="Vegetables: It provides fiber, vitamins, and minerals necessary for a healthy body. It is recommended to include various types of colorful vegetables in the diet"/>
-    </androidx.cardview.widget.CardView>
+                android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/fruit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        app:cardCornerRadius="15dp"
-        android:backgroundTint="@color/white"
-        app:contentPadding="5dp"
-        android:layout_below="@id/vege">
-        <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:orientation="vertical">
-            <ImageView
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/carbo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/firstFood"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@drawable/fruitz"/>
-        </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:textColor="#34be9d"
-            android:layout_marginLeft="120dp"
-            android:layout_marginRight="20dp"
-            android:text="Fruits: Fruits are a great source of vitamins, minerals, and fiber that are essential for health. It is recommended to consume various types of fresh fruits."/>
-    </androidx.cardview.widget.CardView>
+                android:layout_height="match_parent"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:text="@{foods.firstFood}"
+                android:textColor="#34be9d" />
+        </androidx.cardview.widget.CardView>
 
-</RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/protein"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/carbo"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="15dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/fish" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/secondFood"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:text="@{foods.secondFood}"
+                android:textColor="#34be9d" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/vege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/protein"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="15dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/vegetables" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/thirdFood"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:text="@{foods.thirdFood}"
+                android:textColor="#34be9d" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fruit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vege"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="15dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/fruitz" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fourthFood"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:text="@{foods.fourthFood}"
+                android:textColor="#34be9d" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

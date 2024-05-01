@@ -14,7 +14,7 @@ class Menu : AppCompatActivity() {
 
         img = findViewById(R.id.img_food)
         img.setOnClickListener {
-            startActivity(Intent(this, Foods::class.java))
+            startActivity(Intent(this, FoodsActivity::class.java))
         }
         img = findViewById(R.id.img_workout)
         img.setOnClickListener {

@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Menu" />
-        <activity android:name=".Foods" />
+        <activity android:name=".FoodsActivity" />
         <activity android:name=".Time" />
         <activity android:name=".Workout" />
     </application>
