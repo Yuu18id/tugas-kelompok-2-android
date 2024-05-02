@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#34be9d"
-    tools:context=".Time">
+    tools:context=".TimeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,10 +22,11 @@
             android:padding="15dp" />
 
         <TextView
+            android:id="@+id/view"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Rest Center"
             android:paddingTop="12dp"
+            android:text="Rest Center"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -52,14 +53,16 @@
                 android:layout_height="100dp"
                 android:src="@drawable/sleep"/>
         </LinearLayout>
+
         <TextView
+            android:id="@+id/view2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:textColor="#34be9d"
             android:layout_marginLeft="120dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
-            android:text="Getting enough sleep is crucial for overall health and well-being. During sleep, your body and brain undergo processes of restoration, regeneration, and memory consolidation."/>
+            android:text="Getting enough sleep is crucial for overall health and well-being. During sleep, your body and brain undergo processes of restoration, regeneration, and memory consolidation."
+            android:textColor="#34be9d" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -83,14 +86,16 @@
                 android:layout_height="100dp"
                 android:src="@drawable/work"/>
         </LinearLayout>
+
         <TextView
+            android:id="@+id/view3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:textColor="#34be9d"
             android:layout_marginLeft="120dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
-            android:text="Balancing work means finding the right equilibrium between working and resting. Working too much can result in physical and mental fatigue, stress, and decreased productivity."/>
+            android:text="Balancing work means finding the right equilibrium between working and resting. Working too much can result in physical and mental fatigue, stress, and decreased productivity."
+            android:textColor="#34be9d" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -114,14 +119,16 @@
                 android:layout_height="100dp"
                 android:src="@drawable/doctor"/>
         </LinearLayout>
+
         <TextView
+            android:id="@+id/view4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
-            android:textColor="#34be9d"
             android:layout_marginLeft="120dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
-            android:text="Regular health check-ups are essential for maintaining health and detecting potential health issues early on."/>
+            android:text="Regular health check-ups are essential for maintaining health and detecting potential health issues early on."
+            android:textColor="#34be9d" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -145,14 +152,16 @@
                 android:layout_height="100dp"
                 android:src="@drawable/shower"/>
         </LinearLayout>
+
         <TextView
+            android:id="@+id/view5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
-            android:textColor="#34be9d"
             android:layout_marginLeft="120dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
-            android:text="Do not forget to maintain cleanliness. Take a shower 2x a day to help remove dirt after a day of activities"/>
+            android:text="Do not forget to maintain cleanliness. Take a shower 2x a day to help remove dirt after a day of activities"
+            android:textColor="#34be9d" />
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

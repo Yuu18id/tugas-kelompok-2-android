@@ -22,7 +22,7 @@ class Menu : AppCompatActivity() {
         }
         img = findViewById(R.id.img_clock)
         img.setOnClickListener {
-            startActivity(Intent(this, Time::class.java))
+            startActivity(Intent(this, TimeActivity::class.java))
         }
     }
 }

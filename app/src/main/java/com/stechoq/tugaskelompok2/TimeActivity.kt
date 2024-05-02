@@ -5,16 +5,26 @@ import android.os.Bundle
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.stechoq.tugaskelompok2.databinding.ActivityTimeBinding
 
-class Time : AppCompatActivity() {
+class TimeActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityTimeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_time)
+        binding = ActivityTimeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val backButton = findViewById<ImageButton>(R.id.backtime)
-        backButton.setOnClickListener {
+        binding.apply {
+            view
+            view2
+            view3
+            view4
+            view5
+        }
 
+        binding.backtime.setOnClickListener {
             val intent = Intent(this, Menu::class.java)
             startActivity(intent)
         }
