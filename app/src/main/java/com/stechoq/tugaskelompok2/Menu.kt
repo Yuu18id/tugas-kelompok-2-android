@@ -24,5 +24,9 @@ class Menu : AppCompatActivity() {
         img.setOnClickListener {
             startActivity(Intent(this, TimeActivity::class.java))
         }
+        img = findViewById(R.id.img_avoidance)
+        img.setOnClickListener {
+            startActivity(Intent(this, AvoidanceActivity::class.java))
+        }
     }
 }
